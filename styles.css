@@ -1,0 +1,165 @@
+/* Gaya untuk index.html */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Raleway:wght@300&family=Lobster&display=swap');
+
+body.romantic-bg {
+    background: linear-gradient(135deg, #4be4ff, #ff7eb3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.box {
+    background: rgb(112, 123, 118);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #ff758c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* Tampilan di Laptop/PC */
+body.lyrics-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('bgpc.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    font-family: 'Lobster', cursive; /* Menggunakan font Lobster untuk lirik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Tampilan di HP (android, iPhone) */
+@media (max-width: 768px) {
+    body.lyrics-bg {
+        background: url('bg.png') no-repeat center center;
+        background-size: cover;
+        color: white;
+        font-family: 'Lobster', cursive; /* Menggunakan font Lobster untuk lirik */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lyrics-container {
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lyrics p {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: var(--delay);
+    line-height: 1.6;
+    margin: 0;
+    padding: 5px;
+}
+
+.highlight {
+    font-size: 2em;
+    color: yellow;
+    font-weight: bold;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Love animation */
+@keyframes love {
+    0% { opacity: 1; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+.love-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    font-size: 7em; /* Perbesar ukuran love-heart */
+    color: white; /* Warna putih untuk kerangka */
+    animation: love 1.5s ease-in-out forwards;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
